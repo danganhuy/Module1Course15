@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <script>
+        function FindPrime(amount) {
+            let arr = [];
+            let cur = 1;
+            function FindPrimeRecursive() {
+                cur++;
+                let prime = true
+                for (let i = 0; i < arr.length; i++) {
+                    if (cur % arr[i] === 0){
+                        prime = false;
+                        break;
+                    }
+                }
+                if (prime) {
+                    arr.push(cur);
+                }
+                if (arr.length >= amount) {
+                    console.log(arr.length + "   " + amount);
+                    return;
+                }
+                FindPrimeRecursive();
+            }
+            FindPrimeRecursive();
+            return arr;
+        }
+        document.write(FindPrime(20).toString());
+    </script>
+</body>
+</html>
