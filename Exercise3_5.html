@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+<body onload="FindAStar()">
+    <script>
+        const star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        const constellation = ["Ursa Minor", "Tarurus", "Cygnus", 'Lyra', "Aquila", "Ursa Major", "Leo"];
+        function FindAStar() {
+            let inp = prompt("Enter a star name");
+            let index = -1;
+            for (let i = 0; i < star.length; i++) {
+                if (star[i] === inp) {
+                    index = i;
+                    break;
+                }
+            }
+            if (index === -1)
+                document.write(`There is no star name ${inp}`);
+            else
+                document.write(`${star[index]} star belong to ${constellation[index]} constellation`)
+        }
+    </script>
+</body>
+</html>
