@@ -16,7 +16,7 @@ function StartFindCharacter() {
 function DisplayFindCharacter() {
     document.getElementById("inputPanel").innerHTML =
         `<input type="text" id="input1" placeholder="array of character">
-        <input type="text" id="input2" placeholder="character">
+        <input type="text" id="input2" placeholder="character" maxlength="1">
     <br><button type="button" id="button">Check</button>`;
     document.getElementById("button").addEventListener("click",StartFindCharacter);
 }
